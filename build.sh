@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-EXERCISE_ID=61bad738-9990-4f6a-946b-a8f781385455
+EXERCISE_ID=67736b20-56e3-4f0a-bfb2-c96511312d4b
 
 docker build --no-cache --label=pytm.exercise="$EXERCISE_ID" -t $EXERCISE_ID .
 docker stop $EXERCISE_ID && docker rm $EXERCISE_ID
