@@ -21,12 +21,13 @@ class Exercise(AbstractExercise):
 
     def abgabe(self, ja_nein: str) -> Output:
         if ja_nein == "Ja":
-            score = 1
+            score = 1.0
             answ = f"super Sie haben bestanden und einen Score von {score} erhalten"
         else:
-            score = 0
+            score = 0.0
             answ = f"Sie haben leider nicht bestanden..."
 
         return self.output \
             .add_paragraph(Latex(f'{answ}')) \
+            .add_score(score)\
             .add_action('Back to start',self.start)
